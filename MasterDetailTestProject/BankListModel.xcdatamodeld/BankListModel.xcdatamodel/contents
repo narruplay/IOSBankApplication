@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C67" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Bank" representedClassName="DBBank" syncable="YES">
+        <attribute name="bic" attributeType="String" syncable="YES"/>
+        <attribute name="isCached" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updateDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="toBankDetail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BankDetail" inverseName="toBank" inverseEntity="BankDetail" syncable="YES"/>
+    </entity>
+    <entity name="BankDetail" representedClassName="DBBankDetail" syncable="YES">
+        <attribute name="adress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="koressNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tel" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toBank" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bank" inverseName="toBankDetail" inverseEntity="Bank" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Bank" positionX="-13527" positionY="-1944" width="128" height="120"/>
+        <element name="BankDetail" positionX="-13221" positionY="-1926" width="128" height="120"/>
+    </elements>
+</model>
