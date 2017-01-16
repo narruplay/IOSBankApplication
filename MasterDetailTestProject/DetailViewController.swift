@@ -21,7 +21,7 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         if phoneLabelTap != nil{
             phoneLabelTap.isUserInteractionEnabled = true
             phoneLabelTap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(callNumber)))
@@ -45,21 +45,6 @@ class DetailViewController: UIViewController {
         
         isShown = false
     }
-    
-    func testPhone(){
-        phoneNumbers = regex(phoneString: "(8434) 345678, 345679")
-        
-        for label in self.view.subviews[0].subviews{
-            if label.tag == 6{
-                (label as! UILabel).text = ""
-                let phoneNumbers = regex(phoneString: "(8434) 345678, 345679")
-                
-                for number in phoneNumbers{
-                    (label as! UILabel).text = (label as! UILabel).text! + number.getNumber() + "  "
-                }
-            }
-        }
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -68,8 +53,8 @@ class DetailViewController: UIViewController {
     
     
     func updateLabels(){
-        for label in self.view.subviews[1].subviews{
-            label.isHidden = false
+        for label in self.view.subviews[0].subviews{
+
             switch label.tag {
                 case 1:
                     (label as! UILabel).text = bankModel.bankName
@@ -99,13 +84,14 @@ class DetailViewController: UIViewController {
             if call.object == nil{
                 AlertController.sharedInstance.handleCallbackError(error: call.error!, retryAction: nil)
             }else{
-                MainThreadExecuter.execute {
-                    self.bankModel.adress = call.object?.adress!
-                    self.bankModel.city = call.object?.city!
-                    self.bankModel.korrNumber = call.object?.korrNumber!
-                    self.bankModel.tel = call.object?.tel!
-                    self.updateLabels()
+                    MainThreadExecuter.execute {
+                        self.bankModel.adress = call.object?.adress!
+                        self.bankModel.city = call.object?.city!
+                        self.bankModel.korrNumber = call.object?.korrNumber!
+                        self.bankModel.tel = call.object?.tel!
+                        self.updateLabels()
                 }
+                
             }
         }
     }
@@ -113,8 +99,6 @@ class DetailViewController: UIViewController {
     func startActivity(){
         if activityView != nil{
             activityView.isHidden = false
-            
-            activityView.layer.cornerRadius = 1.0
             
             (activityView.subviews[0] as! UIActivityIndicatorView).startAnimating()
         }
@@ -154,8 +138,6 @@ class DetailViewController: UIViewController {
     }
     
     func callNumber() {
-        
-        //let phoneNumber : String = phoneNumbers[0].getCallNumber()
         
         guard let number = URL(string: "telprompt://" + "+74534534534") else { return }
         UIApplication.shared.open(number, options: [:], completionHandler: nil)

@@ -13,7 +13,6 @@
 		8816B66D1DFFE99F00329771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8816B66B1DFFE99F00329771 /* LaunchScreen.storyboard */; };
 		8816B6751DFFEBAE00329771 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816B6741DFFEBAE00329771 /* MasterViewController.swift */; };
 		8816B6771DFFEBC000329771 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816B6761DFFEBC000329771 /* DetailViewController.swift */; };
-		883635871E003A3C00092730 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883635861E003A3C00092730 /* DetailModel.swift */; };
 		8841BB421E2BF7B50059D1B6 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8841BB411E2BF7B50059D1B6 /* StringExtensions.swift */; };
 		8841BB441E2C06EC0059D1B6 /* CallbackResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8841BB431E2C06EC0059D1B6 /* CallbackResult.swift */; };
 		8846EF121E2BC8E80069526E /* TableCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8846EF111E2BC8E80069526E /* TableCustomCell.swift */; };
@@ -44,7 +43,6 @@
 		8816B66E1DFFE99F00329771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8816B6741DFFEBAE00329771 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = ../MasterViewController.swift; sourceTree = "<group>"; };
 		8816B6761DFFEBC000329771 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		883635861E003A3C00092730 /* DetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		8841BB411E2BF7B50059D1B6 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		8841BB431E2C06EC0059D1B6 /* CallbackResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallbackResult.swift; sourceTree = "<group>"; };
 		8846EF111E2BC8E80069526E /* TableCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCustomCell.swift; sourceTree = "<group>"; };
@@ -123,7 +121,6 @@
 		88B3092C1E2ACD56007F25B5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				883635861E003A3C00092730 /* DetailModel.swift */,
 				88F582791E2A90AA00756D99 /* MasterViewModel.swift */,
 				88F5827B1E2A90DE00756D99 /* BankModel.swift */,
 				8841BB431E2C06EC0059D1B6 /* CallbackResult.swift */,
@@ -291,7 +288,6 @@
 				8841BB441E2C06EC0059D1B6 /* CallbackResult.swift in Sources */,
 				88F4B6031E2CBC290030A6DC /* AlertController.swift in Sources */,
 				88B309321E2ACDCF007F25B5 /* BankListModel.xcdatamodeld in Sources */,
-				883635871E003A3C00092730 /* DetailModel.swift in Sources */,
 				8816B6771DFFEBC000329771 /* DetailViewController.swift in Sources */,
 				88F4B6051E2CF25D0030A6DC /* MainThreadExecuter.swift in Sources */,
 				88F582AE1E2AB8BB00756D99 /* BankListProtocol.swift in Sources */,
