@@ -14,14 +14,17 @@ class DetailViewController: UIViewController {
     var bankModel : BankModel!
     var phoneNumbers : [PhoneNumber] = [PhoneNumber]()
     
-    @IBOutlet weak var phoneLabel: UILabel!
+
     @IBOutlet weak var activityView: UIView!
     
+    @IBOutlet weak var phoneLabelTap: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if phoneLabel != nil{
-            self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(callNumber)))
+        if phoneLabelTap != nil{
+            phoneLabelTap.isUserInteractionEnabled = true
+            phoneLabelTap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(callNumber)))
         }
         
     }
@@ -31,12 +34,10 @@ class DetailViewController: UIViewController {
         
         if (isShown){
             getDetailInfo()
-            //endActivity()
         }else{
             self.title = "Информация о банке"
             endActivity()
         }
-        //testPhone()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -131,8 +132,6 @@ class DetailViewController: UIViewController {
         var code = "+7"
         var phone = ""
         var phoneNumbers : [PhoneNumber] = [PhoneNumber]()
-        
-        let phoneStringSep = phoneString.components(separatedBy: ",")
         
         do{
             let reg = try NSRegularExpression(pattern: "(\\((\\d+)\\))\\s*(\\d+)", options: [])
