@@ -115,20 +115,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                         <subviews>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ar2-A9-m3t">
-                                <rect key="frame" x="159" y="306" width="60" height="60"/>
-                                <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="N2x-hR-XWH">
-                                        <rect key="frame" x="12" y="12" width="37" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </activityIndicatorView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="0tq-j6-7ry"/>
-                                    <constraint firstAttribute="width" constant="60" id="gJk-Hu-cFy"/>
-                                </constraints>
-                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4nB-QG-k0D">
                                 <rect key="frame" x="8" y="64" width="359" height="360"/>
                                 <subviews>
@@ -216,14 +202,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ar2-A9-m3t">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gaG-gV-bk0">
+                                        <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="gaG-gV-bk0" firstAttribute="centerY" secondItem="ar2-A9-m3t" secondAttribute="centerY" id="C7x-fy-vBK"/>
+                                    <constraint firstItem="gaG-gV-bk0" firstAttribute="centerX" secondItem="ar2-A9-m3t" secondAttribute="centerX" id="aQb-Un-LG8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4nB-QG-k0D" firstAttribute="leading" secondItem="6Rh-7r-SCi" secondAttribute="leading" constant="8" id="1CP-Vc-xWC"/>
-                            <constraint firstItem="ar2-A9-m3t" firstAttribute="centerY" secondItem="6Rh-7r-SCi" secondAttribute="centerY" id="1sB-TS-XWt"/>
+                            <constraint firstItem="HfS-EU-wAE" firstAttribute="top" secondItem="ar2-A9-m3t" secondAttribute="bottom" id="3jN-5p-JtB"/>
+                            <constraint firstItem="ar2-A9-m3t" firstAttribute="top" secondItem="6Rh-7r-SCi" secondAttribute="top" id="83F-fX-BEr"/>
                             <constraint firstItem="4nB-QG-k0D" firstAttribute="top" secondItem="tbP-bZ-MTo" secondAttribute="bottom" id="8Zt-18-AGc"/>
+                            <constraint firstItem="ar2-A9-m3t" firstAttribute="leading" secondItem="6Rh-7r-SCi" secondAttribute="leading" id="CiO-eZ-LBv"/>
+                            <constraint firstAttribute="trailing" secondItem="ar2-A9-m3t" secondAttribute="trailing" id="LxZ-Yx-FbW"/>
                             <constraint firstAttribute="trailing" secondItem="4nB-QG-k0D" secondAttribute="trailing" constant="8" id="Svm-vZ-3Xo"/>
-                            <constraint firstItem="ar2-A9-m3t" firstAttribute="centerX" secondItem="6Rh-7r-SCi" secondAttribute="centerX" id="uou-lj-9D5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fah-j7-FWH"/>
@@ -234,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jhd-1h-BMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957.5999999999999" y="586.95652173913049"/>
+            <point key="canvasLocation" x="1974" y="600"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
