@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": «7JMX7Q2WEM.AK.DeepLinkApplication",
+        "paths": [
+          "*"
+        ]
+      }
+    ]
+  }
+}
